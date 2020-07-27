@@ -1,31 +1,14 @@
-const path = require('path');
+require('@babel/register');
+const webpackMerge = require('webpack-merge');
 
-module.exports = {
-    entry: './src/app.js',
-    output: {
-        path: path.join(__dirname, 'public'),
-        filename: 'bundle.js'
-    },
-    module:{
-        rules:[
-            {
-                loader: 'babel-loader',
-                test: /\.js$/,
-                exclude: /node_modules/
-            },
-            {
-                test: /\.s?css$/,
-                use:[
-                    'style-loader',
-                    'css-loader',
-                    'sass-loader'
-                ]
-            }
-        ]
-    },
-    devtool: 'cheap-module-eval-source-map',
-    devServer:{
-        contentBase: path.join(__dirname, 'public'),
-        historyApiFallback: true
-    }
+const common = require('./config/webpack/webpack.common.babel');
+
+const envs = {
+    development: 'dev',
+    production: 'prod'
 };
+
+/* eslint-disable global-require,import/no-dynamic-require */
+const env = envs[process.env.NODE_ENV || 'development'];
+const envConfig = require(`./config/webpack/webpack.${env}.babel`);
+module.exports = webpackMerge(common, envConfig);
