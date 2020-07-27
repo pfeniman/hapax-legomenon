@@ -4,10 +4,11 @@
     "description": "",
     "main": "src/index.js",
     "scripts": {
-        "start": "cross-env NODE_ENV=development webpack-dev-server --open",
+        "dev": "cross-env NODE_ENV=development webpack-dev-server --open",
         "build": "cross-env NODE_ENV=production webpack",
         "lint": "eslint ./src/**/**.js",
-        "lint:fix": "eslint ./src/**/**.js --fix"
+        "lint:fix": "eslint ./src/**/**.js --fix",
+        "start": "node server/server.js"
     },
     "author": "Pedro Feniman <pfeniman@gmail.com>",
     "license": "MIT",
@@ -60,7 +61,6 @@
     },
     "dependencies": {
         "cross-env": "^6.0.3",
-        "express": "^4.17.1",
         "react": "^16.12.0",
         "react-dom": "^16.12.0",
         "react-redux": "^7.1.3",
