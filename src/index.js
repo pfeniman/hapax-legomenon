@@ -1,23 +1,26 @@
-import React, { Fragment } from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
-import { Provider } from 'react-redux';
-import { createGlobalStyle } from 'styled-components';
+import React from "react";
+import ReactDOM from "react-dom";
+import AppRouter from './routers/AppRouter';
+import { ThemeProvider } from '@material-ui/core/styles';
+import { createMuiTheme } from '@material-ui/core/styles';
+import teal from '@material-ui/core/colors/teal';
+import deepPurple from '@material-ui/core/colors/deepPurple';
 
-import store from './store';
-import App from './components/App';
-import reset from './constants/css/reset';
+const theme = createMuiTheme({
+    palette: {
+      primary: teal,
+      secondary: deepPurple,
+    },
+});
 
-const GlobalStyle = createGlobalStyle`${reset}`;
+function App() {
+  return (
+    <ThemeProvider theme={theme}>
+        <AppRouter />
+    </ThemeProvider>
+  );
+}
 
-ReactDOM.render(
-    <BrowserRouter>
-        <Fragment>
-            <Provider store={store}>
-                <App />
-            </Provider>
-            <GlobalStyle />
-        </Fragment>
-    </BrowserRouter>,
-    document.getElementById('root')
-);
+
+
+ReactDOM.render(<App />, document.getElementById('root'));
