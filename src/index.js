@@ -5,13 +5,14 @@ import { ThemeProvider } from '@material-ui/core/styles';
 import { createMuiTheme } from '@material-ui/core/styles';
 import teal from '@material-ui/core/colors/teal';
 import deepPurple from '@material-ui/core/colors/deepPurple';
+import {ptBR} from '@material-ui/core/locale';
 
 const theme = createMuiTheme({
     palette: {
       primary: teal,
       secondary: deepPurple,
     },
-});
+}, ptBR);
 
 function App() {
   return (
@@ -20,7 +21,5 @@ function App() {
     </ThemeProvider>
   );
 }
-
-
 
 ReactDOM.render(<App />, document.getElementById('root'));

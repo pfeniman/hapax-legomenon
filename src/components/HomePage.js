@@ -6,6 +6,7 @@ import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import { Link as RouterLink } from 'react-router-dom';
+import Box from '@material-ui/core/Box';
 
 const useStyles = makeStyles((theme) => ({
   icon: {
@@ -43,6 +44,7 @@ export default function HomePage() {
   const classes = useStyles();
 
   return (
+    <Box width="100%">
     <div className={classes.heroContent}>
       <Container maxWidth="sm">
         <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
@@ -67,5 +69,6 @@ export default function HomePage() {
         </div>          
       </Container>
     </div>
+      </Box>
   );
 }
