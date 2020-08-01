@@ -8,10 +8,14 @@ import deepPurple from '@material-ui/core/colors/deepPurple';
 import {ptBR} from '@material-ui/core/locale';
 
 const theme = createMuiTheme({
-    palette: {
-      primary: teal,
-      secondary: deepPurple,
+  palette: {
+    primary: {
+      main: '#e3cfc3',
     },
+    secondary: {
+      main: '#f44336',
+    },
+  },
 }, ptBR);
 
 function App() {

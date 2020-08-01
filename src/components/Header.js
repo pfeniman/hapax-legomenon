@@ -27,16 +27,14 @@ export default function Header() {
   return (
     <React.Fragment>
       <CssBaseline />
-      <AppBar position="static">
+      <AppBar>
         <Toolbar className={classes.toolbar}>
           <Link variant="h6" color="inherit" component={RouterLink} to="/" className={classes.toolbarTitle}>
-              Hapax Legomenon
+              HAPAX LEGOMENON
           </Link>
-          <nav>
-            <Link variant="button" color="inherit" component={RouterLink} to="/about" className={classes.link}>
-              Sobre
-            </Link>
-          </nav>
+          <Link variant="button" color="inherit" component={RouterLink} to="/about" className={classes.link}>
+            Sobre
+          </Link>
         </Toolbar>
       </AppBar>
     </React.Fragment>
