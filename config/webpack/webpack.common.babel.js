@@ -1,6 +1,7 @@
 import webpack from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 
+import path from 'path';
 import paths from './paths';
 import rules from './rules';
 
@@ -16,6 +17,7 @@ module.exports = {
     plugins: [
         new webpack.ProgressPlugin(),
         new HtmlWebpackPlugin({
+            favicon: path.resolve('src', paths.imagesFolder, 'favicon.ico'),
             template: paths.templatePath,
             minify: {
                 collapseInlineTagWhitespace: true,
