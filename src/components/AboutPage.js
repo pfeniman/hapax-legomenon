@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(2)
   },
   aboutAuthor:{
-    marginTop: theme.spacing(2)
+    marginTop: theme.spacing(4)
   }
 }));
 
@@ -36,11 +36,11 @@ export default  function AboutPage(){
           Sobre o site
         </Typography>
         <Typography variant="body1" color="textPrimary" align="justify" gutterBottom>
-          Hapax legomenon é o nome usado para designar uma palavra que aparece uma única vez dentro de um determinado corpo linguístico. 
+          Hapax legomenon é o nome usado para designar uma palavra que aparece uma única vez dentro de um corpo linguístico. 
           O termo é uma transliteração das palavras gregas ἅπαξ λεγόμενον, que podem ser traduzidas como "dito uma só vez".
         </Typography>
         <Typography variant="body1" color="textPrimary" align="justify" gutterBottom>
-          Esse site busca reunir todos os hapax legomenon do Novo Testamento em grego. O texto usado como base para o levantamento dos termos foi a 28ª edição do Nestle-Aland (NA28). É importante frisar que quando se diz que um termo "aparece uma única vez" o que é levado em consideração não é a palavra como está escrita propriamente no texto e sim a sua forma lexical, ou seja, a maneira como ela se encontra em um dicionário. Além disso, substantivos próprios também não foram considerados como hapax legomenon.
+          Esse site busca reunir todos os hapax legomenon do Novo Testamento em grego. O texto usado como base para o levantamento dos termos foi a 28ª edição do Nestle-Aland (NA28). É importante frisar que ao dizer "aparece uma única vez", o que é levado em consideração não é a palavra como está escrita propriamente no texto e sim a sua forma lexical, ou seja, a maneira como ela se encontra em um dicionário. Vale notar também que substantivos próprios não foram incluídos nas listagens.
         </Typography>
         <Typography variant="body1" color="textPrimary" align="justify" gutterBottom>
           Os hapax legomenon estão apresentados da seguinte forma:
